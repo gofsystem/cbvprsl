@@ -27,19 +27,19 @@ function Header() {
                         {({ TransitionProps }) => (
                             <Fade {...TransitionProps} timeout={200}>
                                 <div className="tooltip">
-                                    <Link className="tooltip-item" href="https://t.me/cyberverseofficial" target="_blank">
+                                    <Link className="tooltip-item" href="https://t.me/anatest" target="_blank">
                                         <SvgIcon color="primary" component={Telegram} />
                                         <p>Telegram</p>
                                     </Link>
-                                    <Link className="tooltip-item" href="https://twitter.com/cyberverseCBV" target="_blank">
+                                    <Link className="tooltip-item" href="https://twitter.com/anatest" target="_blank">
                                         <SvgIcon color="primary" component={Twitter} />
                                         <p>Twitter</p>
                                     </Link>
-                                    <Link className="tooltip-item" href="https://medium.com/cyberverseofficial" target="_blank">
+                                    <Link className="tooltip-item" href="https://medium.com/anatest" target="_blank">
                                         <SvgIcon color="primary" component={Instagram} viewBox="0 0 30 30"/>
                                         <p>Instagram</p>
                                     </Link>
-                                    <Link className="tooltip-item" href="https://github.com/CyberVerse2022" target="_blank">
+                                    <Link className="tooltip-item" href="https://github.com/anatest" target="_blank">
                                         <SvgIcon color="primary" component={GitHub} />
                                         <p>GitHub</p>
                                     </Link>
