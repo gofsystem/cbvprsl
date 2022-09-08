@@ -61,25 +61,25 @@ export const loadAccountDetails = createAsyncThunk(
     // oldunstakeAllowance = await oldshecContract.allowance(address, addresses[networkID].OLD_STAKING_ADDRESS);
 
     const presaleContract = new ethers.Contract(addresses[networkID].PRESALE_ADDRESS as string, presaleabi, provider);
-     const price = await presaleContract.tokenRatePerEth();
+    // const price = await presaleContract.tokenRatePerEth();
 
-    const startTime = await presaleContract.startTime();
-   const startTimestamp = new Date(startTime.mul(1000).toNumber());
-     const endTime = await presaleContract.endTime();
-     const endTimestamp = new Date(endTime.mul(1000).toNumber());
+    // const startTime = await presaleContract.startTime();
+    // const startTimestamp = new Date(startTime.mul(1000).toNumber());
+    // const endTime = await presaleContract.endTime();
+    // const endTimestamp = new Date(endTime.mul(1000).toNumber());
 
-    const minEthlimit = await presaleContract.minETHLimit();
-   const maxEthlimit = await presaleContract.maxETHLimit();
-    const hardCap = await presaleContract.hardCap();
-   const totalRaisedBNB = await presaleContract.totalRaisedBNB();
-    const soldAmount = await presaleContract.totaltokenSold();
+    // const minEthlimit = await presaleContract.minETHLimit();
+    // const maxEthlimit = await presaleContract.maxETHLimit();
+    // const hardCap = await presaleContract.hardCap();
+    // const totalRaisedBNB = await presaleContract.totalRaisedBNB();
+    // const soldAmount = await presaleContract.totaltokenSold();
 
     const capable = await presaleContract.getUserRemainingAllocation(address);
     const userInfo = await presaleContract.usersInvestments(address);
 
-   if (addresses[networkID].BUSD_ADDRESS) {
-      presaleAllowance = await busdContract.allowance(address, addresses[networkID].PRESALE_ADDRESS);
-    }
+    // if (addresses[networkID].BUSD_ADDRESS) {
+    //   presaleAllowance = await busdContract.allowance(address, addresses[networkID].PRESALE_ADDRESS);
+    // }
 
     return {
       balances: {
@@ -89,16 +89,16 @@ export const loadAccountDetails = createAsyncThunk(
         // oldshec: ethers.utils.formatUnits(oldshecBalance, "gwei"),
       },
       presale: {
-       price: price,
-        starttime: startTimestamp,
-        endtime: endTimestamp,
+        // price: price,
+        // starttime: startTimestamp,
+        // endtime: endTimestamp,
         capable: ethers.utils.formatEther(capable),
         userInfo: ethers.utils.formatEther(userInfo),
-        minEthlimit: ethers.utils.formatEther(minEthlimit),
-        maxEthlimit: ethers.utils.formatEther(maxEthlimit),
-       hardCap: ethers.utils.formatEther(hardCap),
-       totalRaisedBNB: ethers.utils.formatEther(totalRaisedBNB),
-       soldAmount: ethers.utils.formatEther(soldAmount),
+        // minEthlimit: ethers.utils.formatEther(minEthlimit),
+        // maxEthlimit: ethers.utils.formatEther(maxEthlimit),
+        // hardCap: ethers.utils.formatEther(hardCap),
+        // totalRaisedBNB: ethers.utils.formatEther(totalRaisedBNB),
+        // soldAmount: ethers.utils.formatEther(soldAmount),
       },
       // staking: {
       //   ohmStake: +stakeAllowance,
