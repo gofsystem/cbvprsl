@@ -28,7 +28,7 @@
         "type": "event"
     }, {
         "inputs": [],
-        "name": "DAWA",
+        "name": "ANATEST",
         "outputs": [{
             "internalType": "contract IERC20",
             "name": "",
