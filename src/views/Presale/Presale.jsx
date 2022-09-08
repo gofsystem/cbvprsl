@@ -33,7 +33,7 @@ function Presale() {
   const smallerScreen = useMediaQuery("(max-width: 594px)");
   const { provider, address, connected, connect, chainID } = useWeb3Context();
   const networkID = chainID;
-  const CBV_ADDRESS = addresses[networkID].HEC_ADDRESS;
+  const ANT_ADDRESS = addresses[networkID].HEC_ADDRESS;
   const PRESALE_ADDRESS = addresses[networkID].PRESALE_ADDRESS;
   const [quantity, setQuantity] = useState("");
 
@@ -43,7 +43,7 @@ function Presale() {
   const bnbBalance = useSelector(state => {
     return state.account.balances && state.account.balances.bnb;
   });
-  const cbvBalance = useSelector(state => {
+  const antBalance = useSelector(state => {
     return state.account.balances && state.account.balances.ohm;
   });
   const price = useSelector(state => {
@@ -140,7 +140,7 @@ function Presale() {
                       </>}
                     </Typography>
                     <Typography variant="h4" color="textSecondary" className="title">
-                      Contribute To Get CBV<br/><br/>
+                      Contribute To Get ANT<br/><br/>
                     </Typography>
                     <Grid container className="claimarea">
                         <Grid xs={12} sm={6} md={6} lg={6} style={{marginBottom: '10px'}}>
@@ -184,14 +184,14 @@ function Presale() {
                 <Grid item xs={12} sm={6} md={6} lg={6}>
                   <Paper className="presale-card">
                     <Typography variant="h6" color="textSecondary">
-                      Your CBV Balance:
+                      Your ANT Balance:
                     </Typography>
                     <Typography variant="h4" color="textSecondary" className="title">
-                    {cbvBalance ? new Intl.NumberFormat({
+                    {antBalance ? new Intl.NumberFormat({
                       style: "currency",
                       maximumFractionDigits: 0,
                       minimumFractionDigits: 0,
-                    }).format(cbvBalance): 0} CBV<br/><br/>
+                    }).format(antBalance): 0} ANT<br/><br/>
                     </Typography>
                     <Typography variant="h6" color="textSecondary">
                       Your Available Contribute Amount:
@@ -249,7 +249,7 @@ function Presale() {
                       style: "currency",
                       maximumFractionDigits: 0,
                       minimumFractionDigits: 0,
-                    }).format(soldAmount): 0} CBV<br/>
+                    }).format(soldAmount): 0} ANT<br/>
                     </Typography>
                   </Paper>
                 </Grid>
@@ -273,7 +273,7 @@ function Presale() {
                       style: "currency",
                       maximumFractionDigits: 0,
                       minimumFractionDigits: 0,
-                    }).format(price):0} CBV <small>Per 1BNB</small><br/><br/>
+                    }).format(price):0} ANT <small>Per 1BNB</small><br/><br/>
                     </Typography>
                     <Typography variant="h6" color="textSecondary">
                     Launch Price:
@@ -283,7 +283,7 @@ function Presale() {
                       style: "currency",
                       maximumFractionDigits: 0,
                       minimumFractionDigits: 0,
-                    }).format(5000):0} CBV <small>Per 1BNB</small><br/><br/>
+                    }).format(5000):0} ANT <small>Per 1BNB</small><br/><br/>
                     </Typography>
                     <Typography variant="h6" color="textSecondary" style={minEthlimit && {marginBottom:'10px'}}>
                       Min Contribute:
@@ -312,8 +312,8 @@ function Presale() {
                     <div className="contract-area">
                       <img src={logoImg} height="70px" width= "70px" style={{ marginTop: "7px" }}/>
                       <Typography variant="h6" className="puretext">
-                        <p className="title">CBV Token Address</p>
-                        <Link href={`https://bscscan.com/address/${CBV_ADDRESS}`} target="_blank">{smallerScreen ? shorten(CBV_ADDRESS) : CBV_ADDRESS}</Link>
+                        <p className="title">ANT Token Address</p>
+                        <Link href={`https://bscscan.com/address/${ANT_ADDRESS}`} target="_blank">{smallerScreen ? shorten(ANT_ADDRESS) : ANT_ADDRESS}</Link>
                       </Typography>
                     </div>
                     <div className="contract-area">
