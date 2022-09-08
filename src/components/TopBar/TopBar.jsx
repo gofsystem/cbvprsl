@@ -64,17 +64,17 @@ function TopBar({ theme, toggleTheme, handleDrawerToggle }) {
 
         <Box display="flex" alignItems="center" style={{marginTop: '5px'}}>
           {!isVerySmallScreen &&  
-            <div>
-              <Button variant="contained" href="http://t.me/cyberverseofficial" target="_blank" className="socail-links">
+         <div>
+              <Button variant="contained" href="http://t.me/anatest" target="_blank" className="socail-links">
                 <SvgIcon component={telegramIcon} fill="#fff"/>
               </Button>
-              <Button variant="contained" href="https://twitter.com/cyberverseCBV" target="_blank" className="socail-links">
+              <Button variant="contained" href="https://twitter.com/anatest" target="_blank" className="socail-links">
                 <SvgIcon component={twitterIcon} />
               </Button>
-              <Button variant="contained" href="http://instagram.com/cyberverseofficial" target="_blank" className="socail-links">
+              <Button variant="contained" href="http://instagram.com/anatest" target="_blank" className="socail-links">
                 <SvgIcon component={instagramIcon} viewBox="0 0 30 30"/>
               </Button>
-              <Button variant="contained" href="http://github.com/CyberVerse2022" target="_blank" className="socail-links">
+              <Button variant="contained" href="http://github.com/anatest" target="_blank" className="socail-links">
                 <SvgIcon component={githubIcon}/>
               </Button>
             </div>
