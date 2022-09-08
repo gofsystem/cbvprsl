@@ -33,7 +33,7 @@ function Presale() {
   const smallerScreen = useMediaQuery("(max-width: 594px)");
   const { provider, address, connected, connect, chainID } = useWeb3Context();
   const networkID = chainID;
-  const ANATEST_ADDRESS = addresses[networkID].HEC_ADDRESS;
+  const ANT_ADDRESS = addresses[networkID].HEC_ADDRESS;
   const PRESALE_ADDRESS = addresses[networkID].PRESALE_ADDRESS;
   const [quantity, setQuantity] = useState("");
 
@@ -43,7 +43,7 @@ function Presale() {
   const bnbBalance = useSelector(state => {
     return state.account.balances && state.account.balances.bnb;
   });
-  const ANATESTBalance = useSelector(state => {
+  const ANTBalance = useSelector(state => {
     return state.account.balances && state.account.balances.ohm;
   });
   const price = useSelector(state => {
@@ -187,11 +187,11 @@ function Presale() {
                       Your ANT Balance:
                     </Typography>
                     <Typography variant="h4" color="textSecondary" className="title">
-                    {ANATESTBalance ? new Intl.NumberFormat({
+                    {ANTBalance ? new Intl.NumberFormat({
                       style: "currency",
                       maximumFractionDigits: 0,
                       minimumFractionDigits: 0,
-                    }).format(ANATESTBalance): 0} ANT<br/><br/>
+                    }).format(ANTBalance): 0} ANT<br/><br/>
                     </Typography>
                     <Typography variant="h6" color="textSecondary">
                       Your Available Contribute Amount:
@@ -313,7 +313,7 @@ function Presale() {
                       <img src={logoImg} height="70px" width= "70px" style={{ marginTop: "7px" }}/>
                       <Typography variant="h6" className="puretext">
                         <p className="title">ANT Token Address</p>
-                        <Link href={`https://bscscan.com/address/${ANATEST_ADDRESS}`} target="_blank">{smallerScreen ? shorten(ANATEST_ADDRESS) : ANATEST_ADDRESS}</Link>
+                        <Link href={`https://bscscan.com/address/${ANT_ADDRESS}`} target="_blank">{smallerScreen ? shorten(ANT_ADDRESS) : ANT_ADDRESS}</Link>
                       </Typography>
                     </div>
                     <div className="contract-area">
