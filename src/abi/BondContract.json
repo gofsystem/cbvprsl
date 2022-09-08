@@ -54,7 +54,7 @@
     },
     {
       "inputs": [],
-      "name": "DAWA",
+      "name": "ANATEST",
       "outputs": [{ "internalType": "address", "name": "", "type": "address" }],
       "stateMutability": "view",
       "type": "function"
