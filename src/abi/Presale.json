@@ -28,7 +28,7 @@
         "type": "event"
     }, {
         "inputs": [],
-        "name": "ANT",
+        "name": "DAWA",
         "outputs": [{
             "internalType": "contract IERC20",
             "name": "",
